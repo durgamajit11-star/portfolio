@@ -133,7 +133,7 @@ html {
 /* ===== Hero Section ===== */
 .hero {
     margin-top: 60px;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,7 +142,7 @@ html {
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     gap: 40px;
 }
 
@@ -276,9 +276,10 @@ html {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     animation: slideInRight 1s ease-out;
+    padding-top: 20px;
 }
 
 .hero-animation .profile-image {
@@ -291,6 +292,7 @@ html {
     animation: float 3s ease-in-out infinite;
     position: relative;
     z-index: 5;
+    padding-bottom: 20px;
     
 }
 
@@ -302,10 +304,10 @@ html {
     border-radius: 50%;
     animation: float 6s ease-in-out infinite, pulse-border 3s ease-in-out infinite;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
     z-index: 1;
 }
 
@@ -1375,6 +1377,7 @@ html {
         flex-direction: column;
         padding: 40px 20px;
         margin-top: 60px;
+        overflow: visible;
     }
 
     .hero-title {
@@ -1383,9 +1386,16 @@ html {
 
     .hero-animation {
         margin-top: 2rem;
+        width: 100%;
+        justify-content: center;
     }
 
     .floating-box {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-animation .profile-image {
         width: 200px;
         height: 200px;
     }
