@@ -400,3 +400,79 @@ if ('serviceWorker' in navigator) {
 
 console.log('%cWelcome to the Portfolio!', 'font-size: 20px; color: #6366f1; font-weight: bold;');
 console.log('%cThis portfolio is fully responsive and animated', 'font-size: 14px; color: #ec4899;');
+// ===== EMAILJS CONTACT FORM =====
+
+// Initialize EmailJS
+emailjs.init('07LMcHv5NvlxIVSLI'); // Public Key
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = contactForm.querySelector('input[name="from_name"]');
+        const email = contactForm.querySelector('input[name="from_email"]');
+        const message = contactForm.querySelector('textarea[name="message"]');
+        const submitButton = contactForm.querySelector('.submit-button');
+
+        // Validation
+        if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+            showNotification('Please fill all fields', 'error');
+            return;
+        }
+
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+
+        const templateParams = {
+            name: name.value,
+            email: email.value,
+            message: message.value,
+            time: new Date().toLocaleString()
+        };
+
+        emailjs
+            .send('service_7wtkiss', 'template_kvke35m', templateParams)
+            .then(() => {
+                showNotification('Message sent successfully! 🚀', 'success');
+                contactForm.reset();
+            })
+            .catch(() => {
+                showNotification(
+                    'Failed to send message. Try again later.',
+                    'error'
+                );
+            })
+            .finally(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
+    });
+});
+
+
+// Function to show notifications
+function showNotification(message, type) {
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.textContent = message;
+    
+    document.body.appendChild(notification);
+    
+    // Trigger animation
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 10);
+    
+    // Remove notification after 5 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 5000);
+}

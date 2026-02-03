@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- adding tab icon -->
     <link rel="icon" type="image/x-icon" href="images/icon.svg">
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
 </head>
 
 <body>
@@ -46,8 +48,8 @@
             <h1 class="hero-title">Hi, I'm <span class="highlight">Ajit Durgam</span></h1>
             <p class="hero-subtitle">Full Stack Developer | Creative Problem Solver</p>
             <p class="hero-description">I’m Ajit, a Full Stack Developer and intern who enjoys building clean,
-        responsive web apps. I work with HTML, CSS, JavaScript, Django, and love
-        turning ideas into real products.</p>
+                responsive web apps. I work with HTML, CSS, JavaScript, Django, and love
+                turning ideas into real products.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="cta-button">Get In Touch</a>
                 <a href="documents/Resume.pdf" download class="cta-button">Download CV</a>
@@ -207,19 +209,20 @@
             <div class="education-grid">
                 <div class="education-card">
                     <div class="education-icon">🎓</div>
+                    <h3>Master's in Computer Application</h3>
+                    <p class="education-school">G H Raisoni SkillTech University, Nagpur</p>
+                    <p class="education-date">2024 - 2026</p>
+                    <p class="education-description">Currently Pursuing - Focus on FullStack Web Development</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">🎓</div>
                     <h3>Bachelor's in Computer Application</h3>
                     <p class="education-school">G H Raisoni Institute Of Engineering & Technology, Nagpur</p>
                     <p class="education-date">2020 - 2023</p>
                     <p class="education-description">GPA: 8.47/10.0 - Focus on Web Development and Software Engineering
                     </p>
                 </div>
-                <div class="education-card">
-                    <div class="education-icon">🎓</div>
-                    <h3>Master's in Computer Application</h3>
-                    <p class="education-school">G H Raisoni SkillTech University, Nagpur</p>
-                    <p class="education-date">2024 - 2026</p>
-                    <p class="education-description">Currently Pursuing - Focus on FullStack Web Development</p>
-                </div>
+
                 <!-- <div class="education-card">
                     <div class="education-icon">🏆</div>
                     <h3>AWS Solutions Architect Associate</h3>
@@ -256,9 +259,9 @@
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <input type="text" name="from_name" placeholder="Name" required>
+                    <input type="email" name="from_email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>
             </div>
