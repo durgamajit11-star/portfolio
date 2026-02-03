@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- adding tab icon -->
+    <link rel="icon" type="image/x-icon" href="images/icon.svg">
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img class="logo-hero" src="images/icon.png" alt="logo">
+            <div class="nav-logo">
+                Ajit / <span class="highlight"> Dev</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="sprinkles-container" id="sprinklesContainer"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm <span class="highlight">Ajit Durgam</span></h1>
+            <p class="hero-subtitle">Full Stack Developer | Creative Problem Solver</p>
+            <p class="hero-description">I’m Ajit, a Full Stack Developer and intern who enjoys building clean,
+        responsive web apps. I work with HTML, CSS, JavaScript, Django, and love
+        turning ideas into real products.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-button">Get In Touch</a>
+                <a href="documents/Resume.pdf" download class="cta-button">Download CV</a>
+            </div>
+            <div class="hero-social">
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://github.com" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://twitter.com" target="_blank" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="mailto:your.email@example.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="hero-animation">
+            <div class="floating-box">
+                <img src="images/ajit.jpg" alt="Ajit Durgam" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section-dynamic">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript, Bootstrap, Responsive Design</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Backend</h3>
+                    <p>Django FrameWork, Python, MySQL</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Design</h3>
+                    <p>Canva, Figma</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🚀</div>
+                    <h3>Tools & Deployment</h3>
+                    <p>Git, GitHub, Vs code</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section-dynamic">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>FullStack Developer Intern</h3>
+                        <p class="job-company">S S Infotech | 2026 - present</p>
+                        <p class="job-description">A smart photography platform where users can explore studio
+                            portfolios, book sessions online, and make secure payments—fast, simple, and reliable.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3> Pthon developer intern</h3>
+                        <p class="job-company">MCA Program | 2025 </p>
+                        <p class="job-description">Completed hands-on training in Python, Django, MySQL, and front-end
+                            technologies, django Platform with student management interface.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-dynamic">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/weather.jpg" alt="Weather Forecast App">
+                    </div>
+                    <div class="project-info">
+                        <h3>SkyCast – Weather Forecast App </h3>
+                        <p>Built a Python desktop app with Tkinter and SQLite featuring user login,
+                            real-time weather via API, 5-day forecast, dark/light mode, and local
+                            search history record Database.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Tkinter Library</span>
+                            <span>SQLite</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/movie.jpg" alt=".Movie Recommendation System ">
+                    </div>
+                    <div class="project-info">
+                        <h3>Movie Recommendation System </h3>
+                        <p>mplemented a content-based recommendation model
+                            using Python, scikit-learn, Pandas, and NLP techniques.
+                            Used cosine similarity to analyze movie features and Suggest the
+                            top 10 similar movies based on user input.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>scikit-learn</span>
+                            <span> NLP Techniques</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/photostudio.webp" alt=" PhotoStudio - Photography Booking Platform">
+                    </div>
+                    <div class="project-info">
+                        <h3> Photography Booking Platform</h3>
+                        <p>A modern photo studio booking system that lets users browse portfolios, book studios, and
+                            make secure online payments through a seamless digital platform.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>HTML</span>
+                            <span> CSS Techniques</span>
+                            <span> JavaScript</span>
+                            <span> Django</span>
+                        </div>
+                        <a href="https://github.com/durgamajit11-star/photo_studio" class="project-link">View Project
+                            →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section-dynamic">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">🎓</div>
+                    <h3>Bachelor's in Computer Application</h3>
+                    <p class="education-school">G H Raisoni Institute Of Engineering & Technology, Nagpur</p>
+                    <p class="education-date">2020 - 2023</p>
+                    <p class="education-description">GPA: 8.47/10.0 - Focus on Web Development and Software Engineering
+                    </p>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">🎓</div>
+                    <h3>Master's in Computer Application</h3>
+                    <p class="education-school">G H Raisoni SkillTech University, Nagpur</p>
+                    <p class="education-date">2024 - 2026</p>
+                    <p class="education-description">Currently Pursuing - Focus on FullStack Web Development</p>
+                </div>
+                <!-- <div class="education-card">
+                    <div class="education-icon">🏆</div>
+                    <h3>AWS Solutions Architect Associate</h3>
+                    <p class="education-school">Amazon Web Services</p>
+                    <p class="education-date">2025</p>
+                    <p class="education-description">Certified in cloud architecture and AWS services</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p><a href="mailto:durgamajit11@gmail.com">durgamajit11@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p><a href="phone">+91 9403573908</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Location</h3>
+                        <p>Nagpur, Maharashtra, India</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Ajit Durgam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
