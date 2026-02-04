@@ -531,7 +531,7 @@ html {
 .skill-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
-    animation: bounce 2s ease-in-out infinite, rotate 4s linear infinite;
+    animation: bounce 2s ease-in-out infinite, iconGlow 2s ease-in-out infinite;
 }
 
 .skill-card h3 {
