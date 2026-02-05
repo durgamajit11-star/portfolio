@@ -264,7 +264,7 @@
                     <textarea name="message" placeholder="Message" rows="5" required></textarea>
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>
-                <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
             </div>
         </div>
     </section>
@@ -275,6 +275,39 @@
             <p>&copy; 2026 Ajit Durgam. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+        (function () {
+            emailjs.init("07LMcHv5NvlxIVSLI"); // Public Key
+        })();
+
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // add time field dynamically
+            const timeInput = document.createElement("input");
+            timeInput.type = "hidden";
+            timeInput.name = "time";
+            timeInput.value = new Date().toLocaleString();
+            this.appendChild(timeInput);
+
+            emailjs.sendForm(
+                "service_7wtkiss",
+                "template_kvke35m",
+                this
+            ).then(
+                () => alert("Message sent successfully ✅"),
+                (error) => {
+                    alert("Failed ❌");
+                    console.log(error);
+                }
+            );
+        });
+    </script>
+
+
 
     <script src="js/main.js"></script>
 </body>
