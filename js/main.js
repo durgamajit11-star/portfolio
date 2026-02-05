@@ -403,11 +403,11 @@ console.log('%cThis portfolio is fully responsive and animated', 'font-size: 14p
 // ===== EMAILJS CONTACT FORM =====
 
 // Initialize EmailJS
-emailjs.init('07LMcHv5NvlxIVSLI'); // Public Key
-
 document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contactForm');
 
+    emailjs.init('07LMcHv5NvlxIVSLI'); // Public Key
+
+    const contactForm = document.getElementById('contactForm');
     if (!contactForm) return;
 
     contactForm.addEventListener('submit', function (e) {
@@ -418,41 +418,36 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = contactForm.querySelector('textarea[name="message"]');
         const submitButton = contactForm.querySelector('.submit-button');
 
-        // Validation
-        if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-            showNotification('Please fill all fields', 'error');
-            return;
-        }
-
-        const originalText = submitButton.textContent;
         submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
 
         const templateParams = {
-            name: name.value,
-            email: email.value,
+            from_name: name.value,
+            from_email: email.value,
             message: message.value,
             time: new Date().toLocaleString()
         };
 
-        emailjs
-            .send('service_7wtkiss', 'template_kvke35m', templateParams)
-            .then(() => {
-                showNotification('Message sent successfully! 🚀', 'success');
-                contactForm.reset();
-            })
-            .catch(() => {
-                showNotification(
-                    'Failed to send message. Try again later.',
-                    'error'
-                );
-            })
-            .finally(() => {
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            });
+        emailjs.send(
+            'service_7wtkiss',
+            'template_kvke35m',
+            templateParams
+        )
+        .then(() => {
+            showNotification('Message sent successfully! 🚀', 'success');
+            contactForm.reset();
+        })
+        .catch((error) => {
+            console.error('EmailJS Error:', error);
+            showNotification('Failed to send message.', 'error');
+        })
+        .finally(() => {
+            submitButton.textContent = 'Send Message';
+            submitButton.disabled = false;
+        });
     });
 });
+
 
 
 // Function to show notifications
